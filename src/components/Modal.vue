@@ -1,5 +1,6 @@
 <script setup>
-  const props = defineProps(['header', 'text', 'theme']);
+  // const props = defineProps(['header', 'text', 'theme']);
+  const props = defineProps(['theme']);
   
   // const emit = defineEmits(['enlarge-text']);
 </script>
@@ -7,8 +8,9 @@
 <template>
   <div class="backdrop" @click.self="$emit('toggle-modal')">
     <div class="modal" :class="{ sale: theme === 'sale' }">
-      <h1>{{ header }}</h1>
-      <p>{{ text }}</p>
+      <slot />
+      <!-- <h1>{{ header }}</h1>
+      <p>{{ text }}</p> -->
     </div>
   </div>
 </template>

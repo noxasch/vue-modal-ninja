@@ -31,12 +31,16 @@
   <p>Welcome...</p>
   <!-- <input type="text" ref="name">
   <button @click="handleClick">Click Me</button> -->
-  <Modal v-if="showModal"
+  <!-- <Modal v-if="showModal"
     v-bind:header="header"
     :text="text"
     theme="sale"
     @toggle-modal="toggleModal"
-  />
+  /> -->
+  <Modal v-if="showModal" theme="sale" @toggle-modal="toggleModal">
+    <h1>{{ header }}</h1>
+    <p>{{ text }}</p>
+  </Modal>
 
   <button @click="toggleModal">Click Me</button>
 </template>
