@@ -40,6 +40,10 @@
   <Modal v-if="showModal" theme="sale" @toggle-modal="toggleModal">
     <h1>{{ header }}</h1>
     <p>{{ text }}</p>
+    <template v-slot:links>
+      <a href="javascript:void(0)">Sign up now</a>
+      <a href="javascript:void(0)">More info</a>
+    </template>
   </Modal>
 
   <button @click="toggleModal">Click Me</button>
